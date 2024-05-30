@@ -784,6 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81f63d02cb53c145b2c2ba6a6b6857e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mineralsPrefab: {fileID: 0}
   enemyHP: 10
   onClickDamage: 2.5
 --- !u!212 &2086345395

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6365639428878290149}
   - component: {fileID: 6365639428878290152}
   - component: {fileID: -812376060865981873}
-  - component: {fileID: 5381328182965303018}
+  - component: {fileID: 5816917358939416845}
   m_Layer: 0
   m_Name: Insect 1
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  targetObject: {fileID: 0}
 --- !u!58 &6365639428878290152
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -130,9 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81f63d02cb53c145b2c2ba6a6b6857e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mineralsPrefab: {fileID: 4010654032866446799, guid: d0215b89c7f28d34f96f02d9272dfde3, type: 3}
   enemyHP: 10
   onClickDamage: 2.5
---- !u!50 &5381328182965303018
+--- !u!50 &5816917358939416845
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
