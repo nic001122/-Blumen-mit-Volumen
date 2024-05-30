@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6365639428878290154}
   - component: {fileID: 6365639428878290149}
   - component: {fileID: 6365639428878290152}
+  - component: {fileID: -812376060865981873}
   m_Layer: 0
   m_Name: Insect 1
   m_TagString: Untagged
@@ -116,3 +117,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-812376060865981873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365639428878290148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f81f63d02cb53c145b2c2ba6a6b6857e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: 10
+  onClickDamage: 2.5
