@@ -8,13 +8,11 @@ public class MoveTowards : MonoBehaviour
 
     private Vector2 target;
     private Vector2 position;
-    public GameObject targetObject;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        target = targetObject.transform.position;
+        target = new Vector2(0, 0);
         position = gameObject.transform.position;
     }
 
