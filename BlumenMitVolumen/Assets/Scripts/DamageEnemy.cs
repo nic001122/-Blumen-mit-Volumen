@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageEnemy : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class DamageEnemy : MonoBehaviour
         }
         if (currentLife <= 0)
         {
+            SceneManager.LoadScene(2);
             Destroy(gameObject);
         }
     }

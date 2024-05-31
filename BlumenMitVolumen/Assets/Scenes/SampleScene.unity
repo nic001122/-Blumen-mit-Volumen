@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 6365639428878290148, guid: fb493a613031f5045a0ba0519d556006, type: 3}
-  interval: 0.1
+  interval: 5
 --- !u!4 &1671141667
 Transform:
   m_ObjectHideFlags: 0
