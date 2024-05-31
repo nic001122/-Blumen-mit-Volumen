@@ -55,8 +55,8 @@ public class BucketController : MonoBehaviour
         bucketStartPos = gameObject.transform.position;
     }
 
-    bool aboveWater;
-    bool aboveFlower;
+    [SerializeField] bool aboveWater;
+    [SerializeField] bool aboveFlower;
     bool filled;
     [SerializeField] Sprite emptyBucket;
     [SerializeField] Sprite fullBucket;
@@ -68,11 +68,6 @@ public class BucketController : MonoBehaviour
         {
             aboveWater = true;
         }
-
-        if(collision.gameObject.tag == "Flower")
-        {
-            aboveFlower = true;
-        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -81,6 +76,11 @@ public class BucketController : MonoBehaviour
         {
             canDrag = false;
             gameObject.transform.position = bucketStartPos;
+        }
+
+        if(collision.gameObject.tag == "Flower")
+        {
+            aboveFlower = true;
         }
     }
 
@@ -103,6 +103,4 @@ public class BucketController : MonoBehaviour
         filled = false;
         bucketsr.sprite = emptyBucket;
     }
-
-
 }

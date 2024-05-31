@@ -701,6 +701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd916c09680e504183d2c0c94c8575d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aboveWater: 0
+  aboveFlower: 0
   emptyBucket: {fileID: 21300000, guid: 2f99c887e12daa746a6280a55b21081d, type: 3}
   fullBucket: {fileID: 21300000, guid: 3bae2b68bfc6d304ab2343d3b6f75bb7, type: 3}
   bucketsr: {fileID: 992933673}
@@ -797,7 +799,7 @@ GameObject:
   - component: {fileID: 1302601993}
   m_Layer: 0
   m_Name: Blume
-  m_TagString: Untagged
+  m_TagString: Flower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
