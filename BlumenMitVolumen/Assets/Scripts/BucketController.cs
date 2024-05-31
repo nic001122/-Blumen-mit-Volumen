@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class BucketController : MonoBehaviour
 {
@@ -20,15 +18,35 @@ public class BucketController : MonoBehaviour
                 fillBucket();
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            if(aboveFlower)
+            {
+                wateringFlower();
+            }
+        }
     }
+
+    bool canDrag = true;
 
     void OnMouseDrag()
     {
-        gameObject.transform.position = mousePos;
+        if(canDrag)
+        {
+            gameObject.transform.position = mousePos;
+        }
     }
 
     void OnMouseUp()
     {
+        resetBucketPos();
+    }
+
+    void resetBucketPos()
+    {
+        aboveWater = false;
+        canDrag = true;
         gameObject.transform.position = bucketStartPos;
     }
 
@@ -38,6 +56,7 @@ public class BucketController : MonoBehaviour
     }
 
     bool aboveWater;
+    bool aboveFlower;
     bool filled;
     [SerializeField] Sprite emptyBucket;
     [SerializeField] Sprite fullBucket;
@@ -45,8 +64,32 @@ public class BucketController : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D collision)
     {
-        aboveWater = true;
-        Debug.Log(aboveWater);
+        if(collision.gameObject.tag == "Water")
+        {
+            aboveWater = true;
+        }
+
+        if(collision.gameObject.tag == "Flower")
+        {
+            aboveFlower = true;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            canDrag = false;
+            gameObject.transform.position = bucketStartPos;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Water")
+        {
+            aboveWater = false;
+        }
     }
 
     void fillBucket()
@@ -54,4 +97,12 @@ public class BucketController : MonoBehaviour
         filled = true;
         bucketsr.sprite = fullBucket;
     }
+
+    void wateringFlower()
+    {
+        filled = false;
+        bucketsr.sprite = emptyBucket;
+    }
+
+
 }

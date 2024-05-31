@@ -9,8 +9,8 @@ public class DamageEnemy : MonoBehaviour
 
 
     private bool isAttacking = false;
-    private int maxLife = 100;
-    [SerializeField]private int currentLife = 0;
+    public int maxLife = 100;
+    public int currentLife = 0;
 
     private void Start()
     {
