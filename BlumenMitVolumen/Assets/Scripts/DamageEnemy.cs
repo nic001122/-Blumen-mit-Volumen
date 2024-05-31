@@ -8,7 +8,7 @@ public class DamageEnemy : MonoBehaviour
     private float timeLimit = 2f;
 
 
-    private bool isAttacking = false;
+    public bool isAttacking;
     public int maxLife = 100;
     public int currentLife = 0;
 
@@ -20,8 +20,11 @@ public class DamageEnemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isAttacking = true;
-        
+    }
 
+    void OnCollisionExit2D()
+    {
+        isAttacking = false;
     }
     private void Update()
     {

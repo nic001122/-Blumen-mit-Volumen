@@ -132,6 +132,7 @@ MonoBehaviour:
   mineralsPrefab: {fileID: 4010654032866446799, guid: d0215b89c7f28d34f96f02d9272dfde3, type: 3}
   enemyHP: 10
   onClickDamage: 2.5
+  isAttacking: 0
 --- !u!50 &5816917358939416845
 Rigidbody2D:
   serializedVersion: 4
