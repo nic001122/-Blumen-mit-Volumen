@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &390848277
 RectTransform:
   m_ObjectHideFlags: 0
@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 1302601991}
   - component: {fileID: 1302601992}
   - component: {fileID: 1302601993}
+  - component: {fileID: 1302601994}
   m_Layer: 0
   m_Name: Blume
   m_TagString: Flower
@@ -1047,6 +1048,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1302601994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302601988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f7e564b1260624393989c7aa411968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageEnemy: {fileID: 1302601992}
+  firstStageChange: 0.75
+  secondStageChange: 0.25
+  flowerSr: {fileID: 1302601989}
+  badFlower: {fileID: 21300000, guid: 3bae2b68bfc6d304ab2343d3b6f75bb7, type: 3}
+  worstFlower: {fileID: 21300000, guid: 2f99c887e12daa746a6280a55b21081d, type: 3}
 --- !u!1 &1657230992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,7 +1187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1671141666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,7 +1452,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
