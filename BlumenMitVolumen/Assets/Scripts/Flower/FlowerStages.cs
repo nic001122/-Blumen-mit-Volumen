@@ -15,8 +15,6 @@ public class FlowerStages : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if(damageEnemy.currentLife <= damageEnemy.maxLife * firstStageChange
             && damageEnemy.currentLife > damageEnemy.maxLife * secondStageChange)
         {
