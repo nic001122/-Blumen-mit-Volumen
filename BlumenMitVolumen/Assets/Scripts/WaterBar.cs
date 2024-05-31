@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaterBar : MonoBehaviour
 {
@@ -14,15 +14,20 @@ public class WaterBar : MonoBehaviour
     int damageInt;
     [SerializeField] DamageEnemy damageEnemy;
 
+    [SerializeField] Slider waterSlider;
+
+
     // Start is called before the first frame update
     void Awake()
     {
+        waterSlider.maxValue = maxWaterBar;
         currentWaterBar = maxWaterBar;
     }
 
     // Update is called once per frame
     void Update()
     {
+        waterSlider.value = currentWaterBar;
         if(currentWaterBar <= damageBarrier)
         {
             damage += Time.deltaTime;
