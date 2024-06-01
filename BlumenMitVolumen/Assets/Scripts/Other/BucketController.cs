@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class BucketController : MonoBehaviour
 {
-    Vector3 mousePos;
-    Vector3 bucketStartPos;
+    Vector2 mousePos;
+    Vector2 bucketStartPos;
+
+    [SerializeField] bool aboveWater;
+    [SerializeField] bool aboveFlower;
+
+    [SerializeField] Sprite emptyBucket;
+    [SerializeField] Sprite fullBucket;
+    [SerializeField] SpriteRenderer bucketsr;
+
+    [SerializeField] WaterBar waterBar;
+    [SerializeField] float waterReplenishAmount;
 
     void Update()
     {
@@ -55,12 +65,7 @@ public class BucketController : MonoBehaviour
         bucketStartPos = gameObject.transform.position;
     }
 
-    [SerializeField] bool aboveWater;
-    [SerializeField] bool aboveFlower;
-    bool filled;
-    [SerializeField] Sprite emptyBucket;
-    [SerializeField] Sprite fullBucket;
-    [SerializeField] SpriteRenderer bucketsr;
+
     
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -92,15 +97,22 @@ public class BucketController : MonoBehaviour
         }
     }
 
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Flower")
+        {
+            aboveFlower = false;
+        }
+    }
+
     void fillBucket()
     {
-        filled = true;
         bucketsr.sprite = fullBucket;
     }
 
     void wateringFlower()
     {
-        filled = false;
+        waterBar.currentWaterBar += waterReplenishAmount;
         bucketsr.sprite = emptyBucket;
     }
 }

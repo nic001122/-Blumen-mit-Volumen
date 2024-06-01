@@ -42,5 +42,15 @@ public class WaterBar : MonoBehaviour
                 damage = 0;
             }
         }
+
+        if(currentWaterBar <= 0)
+        {
+            currentWaterBar = 0;
+        }
+
+        if(currentWaterBar >= maxWaterBar)
+        {
+            currentWaterBar = maxWaterBar;
+        }
     }
 }
