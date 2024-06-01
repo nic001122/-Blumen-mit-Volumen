@@ -20,7 +20,10 @@ public class DamageEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isAttacking = true;
+        if(collision.gameObject.tag == "Enemy")
+        {
+            isAttacking = true;    
+        }
     }
 
     void OnCollisionExit2D()
