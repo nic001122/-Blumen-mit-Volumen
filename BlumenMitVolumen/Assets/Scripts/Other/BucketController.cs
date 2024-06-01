@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BucketController : MonoBehaviour
 {
-    Vector2 mousePos;
-    Vector2 bucketStartPos;
+    Vector3 mousePos;
+    Vector3 bucketStartPos;
 
     void Update()
     {

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject EnemyPrefab;
-    [SerializeField]private float interval = 2f;
+    public GameObject enemyPrefab;
+    public GameObject spawnLocation;
+    [SerializeField] float enemySpawnRadius = 50;
+    [SerializeField] float noEnemyRadius = 25;
+
+    [SerializeField]private float interval;
     private float count = 0f;
 
 
@@ -17,7 +21,26 @@ public class EnemySpawner : MonoBehaviour
         if (count >= interval)
         {
             count = 0f;
-            Instantiate(EnemyPrefab, transform.position, transform.rotation);
+            CheckSpawnLocation();
+        }
+    }
+
+    void SpawnEnemy()
+    {
+        Instantiate(enemyPrefab, spawnLocation.transform.position, transform.rotation);
+    }
+
+    void CheckSpawnLocation()
+    {
+        spawnLocation.transform.position = Random.insideUnitCircle * enemySpawnRadius;
+
+        if(spawnLocation.transform.position.x <= noEnemyRadius && spawnLocation.transform.position.y <= noEnemyRadius)
+        {
+            CheckSpawnLocation();
+        }
+        else
+        {
+            SpawnEnemy();
         }
     }
 }
