@@ -9,6 +9,7 @@ public class BucketController : MonoBehaviour
 
     [SerializeField] bool aboveWater;
     [SerializeField] bool aboveFlower;
+    bool filled;
 
     [SerializeField] Sprite emptyBucket;
     [SerializeField] Sprite fullBucket;
@@ -31,7 +32,7 @@ public class BucketController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F))
         {
-            if(aboveFlower)
+            if(aboveFlower && filled)
             {
                 wateringFlower();
             }
@@ -107,11 +108,13 @@ public class BucketController : MonoBehaviour
 
     void fillBucket()
     {
+        filled = true;
         bucketsr.sprite = fullBucket;
     }
 
     void wateringFlower()
     {
+        filled = false;
         waterBar.currentWaterBar += waterReplenishAmount;
         bucketsr.sprite = emptyBucket;
     }
