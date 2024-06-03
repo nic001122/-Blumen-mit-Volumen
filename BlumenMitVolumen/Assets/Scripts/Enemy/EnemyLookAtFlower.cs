@@ -11,7 +11,7 @@ public class EnemyLookAtFlower : MonoBehaviour
     void Update()
     {
         enemyAngle = Mathf.Atan2(transform.position.y, transform.position.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(enemyAngle, Vector3.forward);
+        Quaternion rotation = Quaternion.AngleAxis(enemyAngle - 180, Vector3.forward);
         enemy.rotation = rotation;
     }
 }
