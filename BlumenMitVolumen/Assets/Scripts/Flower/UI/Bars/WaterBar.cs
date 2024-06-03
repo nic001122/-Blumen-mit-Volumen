@@ -5,34 +5,36 @@ using UnityEngine.UI;
 
 public class WaterBar : MonoBehaviour
 {
-    [SerializeField] float waterLoss;
-
-    public int maxWaterBar = 100;
-    public float currentWaterBar;
-    public float damageBarrier;
-    public float damage;
-    public int damageMultiplier = 1; // Wie viel Schaden Hinzugefügt wird [int]
-    public int damageDelay = 1; // Wie viele Sekunden vorbei gehen müssen für Schaden [int]
-    int damageInt;
     [SerializeField] DamageEnemy damageEnemy;
-    [SerializeField] Slider waterSlider;
 
-    // Start is called before the first frame update
-    void Awake()
+    [SerializeField] float currentWater;
+    [SerializeField] int currentWaterInt;
+    [SerializeField] float maxWater = 500;
+    [SerializeField] float damageBarrier;
+    float damage;
+    [SerializeField] int damageDelay = 1; // Wie viele Sekunden vergehen bis man Schaden bekommt (int)
+    [SerializeField] int damageMultiplier = 1; // Wie viel Schaden man pro delay-Sekunden bekommt (int)
+    int damageInt;
+
+
+    [SerializeField] RectTransform barRect;
+    [SerializeField] RectMask2D mask;
+    
+    float maxRightMask;
+    float initialRightMask;
+
+    void Start()
     {
-        waterSlider.maxValue = maxWaterBar;
-        currentWaterBar = maxWaterBar;
+        currentWater = maxWater;
+        maxRightMask = barRect.rect.width - mask.padding.x - mask.padding.y;
+        initialRightMask = mask.padding.z;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        waterLoss += Time.deltaTime;
-        currentWaterBar -= waterLoss * Time.deltaTime;
-        
+        currentWater -= Time.deltaTime;
 
-        waterSlider.value = currentWaterBar;
-        if(currentWaterBar <= damageBarrier)
+        if(currentWater <= damageBarrier)
         {
             damage += Time.deltaTime;
             if(damage >= damageDelay)
@@ -43,14 +45,25 @@ public class WaterBar : MonoBehaviour
             }
         }
 
-        if(currentWaterBar <= 0)
+        if(currentWater <= 0)
         {
-            currentWaterBar = 0;
+            currentWater = 0;
+        }
+        if(currentWater >= maxWater)
+        {
+            currentWater = maxWater;
         }
 
-        if(currentWaterBar >= maxWaterBar)
-        {
-            currentWaterBar = maxWaterBar;
-        }
+        currentWaterInt = Mathf.RoundToInt(currentWater);
+        SetValue(currentWaterInt);
+    }
+
+    public void SetValue(int newValue)
+    {
+        var targetWidth = newValue * maxRightMask / maxWater;
+        var newRightMask = maxRightMask + initialRightMask - targetWidth;
+        var padding = mask.padding;
+        padding.z = newRightMask;
+        mask.padding = padding;
     }
 }
