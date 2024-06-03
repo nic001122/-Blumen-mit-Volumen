@@ -48,5 +48,9 @@ public class DamageEnemy : MonoBehaviour
             SceneManager.LoadScene(2);
             Destroy(gameObject);
         }
+        if(currentLife >= maxLife)
+        {
+            currentLife = maxLife;
+        }
     }
 }
