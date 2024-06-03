@@ -786,7 +786,7 @@ MonoBehaviour:
   emptyBucket: {fileID: 21300000, guid: 2f99c887e12daa746a6280a55b21081d, type: 3}
   fullBucket: {fileID: 21300000, guid: 3bae2b68bfc6d304ab2343d3b6f75bb7, type: 3}
   bucketsr: {fileID: 992933673}
-  waterBar: {fileID: 0}
+  waterBar: {fileID: 741067702}
   waterReplenishAmount: 100
 --- !u!212 &992933673
 SpriteRenderer:

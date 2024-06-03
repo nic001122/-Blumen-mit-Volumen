@@ -115,7 +115,7 @@ public class BucketController : MonoBehaviour
     void wateringFlower()
     {
         filled = false;
-        //waterBar.currentWaterBar += waterReplenishAmount;
+        waterBar.currentWater += waterBar.maxWater;
         bucketsr.sprite = emptyBucket;
     }
 }

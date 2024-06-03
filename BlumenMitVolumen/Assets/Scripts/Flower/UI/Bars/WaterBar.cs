@@ -7,9 +7,9 @@ public class WaterBar : MonoBehaviour
 {
     [SerializeField] DamageEnemy damageEnemy;
 
-    [SerializeField] float currentWater;
+    public float currentWater;
     [SerializeField] int currentWaterInt;
-    [SerializeField] float maxWater = 500;
+    public float maxWater = 500;
     [SerializeField] float damageBarrier;
     float damage;
     [SerializeField] int damageDelay = 1; // Wie viele Sekunden vergehen bis man Schaden bekommt (int)
