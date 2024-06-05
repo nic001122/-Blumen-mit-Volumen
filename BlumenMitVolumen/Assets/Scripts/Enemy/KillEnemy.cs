@@ -13,7 +13,7 @@ public class KillEnemy : MonoBehaviour
         enemyHP -= onClickDamage;
         if (enemyHP <= 0)
         {
-            Instantiate(mineralsPrefab, transform.position, transform.rotation);
+            Instantiate(mineralsPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
             Destroy(gameObject);
         }
     }

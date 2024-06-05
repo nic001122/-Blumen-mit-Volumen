@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding: {x: 29, y: 0, z: 5, w: 0}
+  m_Padding: {x: 29, y: 0, z: 4.2, w: 0}
   m_Softness: {x: 0, y: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Padding: {x: 37, y: 0, z: 162, w: 0}
+  m_Padding: {x: 36.1, y: 0, z: 161.2, w: 0}
   m_Softness: {x: 0, y: 0}
 --- !u!1 &1823581011
 GameObject:
