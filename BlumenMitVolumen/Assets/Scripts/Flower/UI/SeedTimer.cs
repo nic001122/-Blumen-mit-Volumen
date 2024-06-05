@@ -1,11 +1,24 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class SeedTimer : MonoBehaviour
 {
+    public static SeedTimer Instance {get; set;}
+
+    void Awake()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     [SerializeField] TextMeshProUGUI seedTimer;
 
     public float mineralDecrease = 10;
