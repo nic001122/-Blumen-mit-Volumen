@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SeedTimer : MonoBehaviour
 {
@@ -31,5 +32,10 @@ public class SeedTimer : MonoBehaviour
         timerLength -= Time.deltaTime;
         timerLengthInt = Mathf.RoundToInt(timerLength);
         seedTimer.text = timerLengthInt.ToString();
+
+        if(timerLengthInt <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }
