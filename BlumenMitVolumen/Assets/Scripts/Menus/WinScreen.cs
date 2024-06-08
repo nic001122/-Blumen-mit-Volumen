@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonController : MonoBehaviour
+public class WinScreen : MonoBehaviour
 {
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject creditsScreen;
