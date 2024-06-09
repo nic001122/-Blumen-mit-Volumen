@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mineralsPrefab: {fileID: 4010654032866446799, guid: d0215b89c7f28d34f96f02d9272dfde3, type: 3}
+  particleSystem: {fileID: 8409450247937123268, guid: 82805cb993981e344b5eab35e0af4f5d, type: 3}
   enemyHP: 10
   onClickDamage: 2.5
 --- !u!50 &5816917358939416845
