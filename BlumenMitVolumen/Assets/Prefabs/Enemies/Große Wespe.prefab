@@ -15,8 +15,10 @@ GameObject:
   - component: {fileID: -812376060865981873}
   - component: {fileID: 5816917358939416845}
   - component: {fileID: -8068518834148610181}
+  - component: {fileID: -1064300187832491311}
+  - component: {fileID: -2439350826013432189}
   m_Layer: 0
-  m_Name: Insect 4
+  m_Name: "Gro\xDFe Wespe"
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +98,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6365639428878290148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c1fd8590fc89542a7b1baa2aa3b41d, type: 3}
   m_Name: 
@@ -169,3 +171,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 6365639428878290155}
   enemyAngle: 0
+--- !u!95 &-1064300187832491311
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365639428878290148}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2439350826013432189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365639428878290148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f4d0b39d82ff4940b43bd7c118a60f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: -1064300187832491311}
+  newController: {fileID: 9100000, guid: f1c14ca12673ec14691411765b78a396, type: 2}
