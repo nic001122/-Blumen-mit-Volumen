@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 11422702215a47a4780f2492e08ac145, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mineralsPrefab: {fileID: 4010654032866446799, guid: d0215b89c7f28d34f96f02d9272dfde3, type: 3}
   particleSys: {fileID: 8409450247937123268, guid: 82805cb993981e344b5eab35e0af4f5d, type: 3}
+  parentCanvas: {fileID: 0}
   enemyHP: 10
   onClickDamage: 2.5
 --- !u!50 &5816917358939416845

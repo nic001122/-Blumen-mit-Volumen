@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d11786f702120a64fb15d698e1dbab3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -161,7 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f7e564b1260624393989c7aa411968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageEnemy: {fileID: 0}
   firstStageChange: 0.75
   secondStageChange: 0.25
   flowerSr: {fileID: 6573758521226634959}

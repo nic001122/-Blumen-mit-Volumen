@@ -39,14 +39,9 @@ public class BucketController : MonoBehaviour
         }
     }
 
-    bool canDrag = true;
-
     void OnMouseDrag()
     {
-        if(canDrag)
-        {
             gameObject.transform.position = mousePos;
-        }
     }
 
     void OnMouseUp()
@@ -56,8 +51,6 @@ public class BucketController : MonoBehaviour
 
     void resetBucketPos()
     {
-        aboveWater = false;
-        canDrag = true;
         gameObject.transform.position = bucketStartPos;
     }
 
@@ -74,15 +67,6 @@ public class BucketController : MonoBehaviour
         {
             aboveWater = true;
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-            canDrag = false;
-            gameObject.transform.position = bucketStartPos;
-        }
 
         if(collision.gameObject.tag == "Flower")
         {
@@ -96,10 +80,7 @@ public class BucketController : MonoBehaviour
         {
             aboveWater = false;
         }
-    }
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
         if(collision.gameObject.tag == "Flower")
         {
             aboveFlower = false;
