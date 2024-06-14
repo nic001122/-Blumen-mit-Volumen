@@ -1173,11 +1173,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfcf574bb6bad64a875349dac3f149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 6365639428878290148, guid: fb493a613031f5045a0ba0519d556006, type: 3}
+  samuelEnemyPrefab: {fileID: 6365639428878290148, guid: fb493a613031f5045a0ba0519d556006, type: 3}
+  blueEnemyPrefab: {fileID: 6365639428878290148, guid: 34d2dc6e160e2c3439b810215464fe1b, type: 3}
+  smallWaspEnemyPrefab: {fileID: 6365639428878290148, guid: 21b7e305896681d47bbf9645fcc5d4cb, type: 3}
+  brownEnemyPrefab: {fileID: 6365639428878290148, guid: 6a43d860f1260e3499f1d69480c94fd2, type: 3}
+  bigWaspEnemyPrefab: {fileID: 6365639428878290148, guid: 9548c3d9f4696c843b3fc7e7a839917f, type: 3}
   spawnLocation: {fileID: 1918729504}
   enemySpawnRadius: 30
   noEnemyRadius: 25
   interval: 5
+  round: 1
 --- !u!4 &1671141667
 Transform:
   m_ObjectHideFlags: 0
