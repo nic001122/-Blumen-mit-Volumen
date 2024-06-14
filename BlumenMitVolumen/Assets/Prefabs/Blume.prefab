@@ -164,5 +164,5 @@ MonoBehaviour:
   firstStageChange: 0.75
   secondStageChange: 0.25
   flowerSr: {fileID: 6573758521226634959}
-  badFlower: {fileID: 21300000, guid: 3bae2b68bfc6d304ab2343d3b6f75bb7, type: 3}
-  worstFlower: {fileID: 21300000, guid: 2f99c887e12daa746a6280a55b21081d, type: 3}
+  badFlower: {fileID: 21300000, guid: aa4673e2a6906304b9be98c40e10b1c5, type: 3}
+  worstFlower: {fileID: 21300000, guid: 0e84003730481d6449c3cfe8bb3908eb, type: 3}

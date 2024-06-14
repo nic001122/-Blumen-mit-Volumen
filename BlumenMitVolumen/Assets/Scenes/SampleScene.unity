@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedTimer: {fileID: 1823581013}
   mineralDecrease: 10
-  timerLength: 300
+  timerLength: 600
   timerLengthInt: 0
 --- !u!1 &110071091
 GameObject:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWater: 0
   currentWaterInt: 0
-  maxWater: 550
+  maxWater: 350
   damageBarrier: 0
   damageDelay: 1
   damageMultiplier: 1
