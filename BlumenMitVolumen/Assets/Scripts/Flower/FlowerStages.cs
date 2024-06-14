@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FlowerStages : MonoBehaviour
 {
-    [SerializeField] DamageEnemy damageEnemy;
     [SerializeField] float firstStageChange = 0.75f;
     [SerializeField] float secondStageChange = 0.25f;
 
@@ -15,12 +14,12 @@ public class FlowerStages : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(damageEnemy.currentLife <= damageEnemy.maxLife * firstStageChange
-            && damageEnemy.currentLife > damageEnemy.maxLife * secondStageChange)
+        if(FlowerHealth.instance.currentLife <= FlowerHealth.instance.maxLife * firstStageChange
+            && FlowerHealth.instance.currentLife > FlowerHealth.instance.maxLife * secondStageChange)
         {
             flowerSr.sprite = badFlower;
         }
-        else if(damageEnemy.currentLife <= damageEnemy.maxLife * secondStageChange)
+        else if(FlowerHealth.instance.currentLife <= FlowerHealth.instance.maxLife * secondStageChange)
         {
             flowerSr.sprite = worstFlower;
         }

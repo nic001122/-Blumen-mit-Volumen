@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6573758521226634956}
   - component: {fileID: 6573758521226634959}
   - component: {fileID: 6573758521226634957}
-  - component: {fileID: 6573758521226634946}
   - component: {fileID: 6573758521226634947}
+  - component: {fileID: 1747476608788590791}
   - component: {fileID: 6573758521226634944}
   m_Layer: 0
   m_Name: Blume
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d11786f702120a64fb15d698e1dbab3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -114,21 +114,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6573758521226634946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6573758521226634958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52dad02563bd7c24fa522a3327d706dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacking: 0
-  maxLife: 100
-  currentLife: 0
 --- !u!50 &6573758521226634947
 Rigidbody2D:
   serializedVersion: 4
@@ -150,6 +135,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1747476608788590791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573758521226634958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812dab5ccc9759a46ad68d4c5226c0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 100
+  currentLife: 0
 --- !u!114 &6573758521226634944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f7e564b1260624393989c7aa411968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageEnemy: {fileID: 6573758521226634946}
+  damageEnemy: {fileID: 0}
   firstStageChange: 0.75
   secondStageChange: 0.25
   flowerSr: {fileID: 6573758521226634959}

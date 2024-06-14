@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class WaterBar : MonoBehaviour
 {
-    [SerializeField] DamageEnemy damageEnemy;
-
     public float currentWater;
     [SerializeField] int currentWaterInt;
     public float maxWater = 500;
@@ -40,7 +38,7 @@ public class WaterBar : MonoBehaviour
             if(damage >= damageDelay)
             {
                 damageInt = Mathf.RoundToInt(damage);
-                damageEnemy.currentLife -= damageInt * damageMultiplier;
+                FlowerHealth.instance.currentLife -= damageInt * damageMultiplier;
                 damage = 0;
             }
         }

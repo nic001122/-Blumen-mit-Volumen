@@ -5,10 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] DamageEnemy damageEnemy;
-
     [SerializeField] RectTransform barRect;
-
     [SerializeField] RectMask2D mask;
 
     float maxRightMask;
@@ -24,12 +21,12 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetValue(damageEnemy.currentLife);
+        SetValue(FlowerHealth.instance.currentLife);
     }
 
-    public void SetValue(int newValue)
+    public void SetValue(float newValue)
     {
-        var targetWidth = newValue * maxRightMask / damageEnemy.maxLife;
+        var targetWidth = newValue * maxRightMask / FlowerHealth.instance.maxLife;
         var newRightMask = maxRightMask + initialRightMask - targetWidth;
         var padding = mask.padding;
         padding.z = newRightMask;

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -8068518834148610181}
   - component: {fileID: -3507066667581426057}
   - component: {fileID: 6521203563886417082}
+  - component: {fileID: -5066636213027500391}
   m_Layer: 0
   m_Name: Kleine Wespe
   m_TagString: Enemy
@@ -133,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mineralsPrefab: {fileID: 4010654032866446799, guid: d0215b89c7f28d34f96f02d9272dfde3, type: 3}
-  particleSystem: {fileID: 8409450247937123268, guid: 82805cb993981e344b5eab35e0af4f5d, type: 3}
+  particleSys: {fileID: 8409450247937123268, guid: 82805cb993981e344b5eab35e0af4f5d, type: 3}
   enemyHP: 10
   onClickDamage: 2.5
 --- !u!50 &5816917358939416845
@@ -206,3 +207,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: -3507066667581426057}
   newController: {fileID: 9100000, guid: be28f1c5f95f0024e84529a289acb56c, type: 2}
+--- !u!114 &-5066636213027500391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365639428878290148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8011fc9a6ea0d6741acc3869a64c08de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacking: 0
+  timer: 0
+  attackDelay: 2
+  damage: 1

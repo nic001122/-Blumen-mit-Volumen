@@ -6,7 +6,7 @@ using UnityEngine;
 public class KillEnemy : MonoBehaviour
 {
     [SerializeField] GameObject mineralsPrefab;
-    [SerializeField] ParticleSystem particleSystem;
+    [SerializeField] ParticleSystem particleSys;
 
     [SerializeField] float enemyHP = 10f;
     [SerializeField] float onClickDamage = 2.5f;
@@ -17,7 +17,7 @@ public class KillEnemy : MonoBehaviour
         if (enemyHP <= 0)
         {
             Instantiate(mineralsPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
-            Instantiate(particleSystem, transform.position, Quaternion.identity);
+            Instantiate(particleSys, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
