@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float enemySpawnRadius = 50;
     [SerializeField] float noEnemyRadius = 25;
 
-    [SerializeField]private float interval;
+    [SerializeField] private float interval;
     private float count = 0f;
 
     int roll;
@@ -27,17 +27,17 @@ public class EnemySpawner : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
-        SetVars();
-        
+    {    
         if(round == 1 && tempRoundLength <= roundLength)
         {
+            SetVars(5, 8);  // float interval, int roundlength
+
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
                 if(count >= interval)
                 {
-                    RandomTypeOneEnemy();
+                    FirstRoundRandom();
                     tempRoundLength++;
                     count = 0;
                 }
@@ -52,12 +52,14 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 2 && tempRoundLength <= roundLength)
         {
+            SetVars(3.75f, 10);
+
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
                 if(count >= interval)
                 {
-                    RandomTypeOneEnemy();
+                    SecondRoundRandom();
                     tempRoundLength++;
                     count = 0;
                 }
@@ -72,6 +74,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 3 && tempRoundLength <= roundLength)
         {
+            SetVars(3, 5);
+            
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
@@ -92,6 +96,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 4 && tempRoundLength <= roundLength)
         {
+            SetVars(3, 7);
+            
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
@@ -112,6 +118,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 5 && tempRoundLength <= roundLength)
         {
+            SetVars(3, 7);
+            
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
@@ -132,6 +140,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 6 && tempRoundLength <= roundLength)
         {
+            SetVars(3, 7);
+            
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
@@ -152,6 +162,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 7 && tempRoundLength <= roundLength)
         {
+            SetVars(3, 7);
+            
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
@@ -172,6 +184,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 8 && tempRoundLength <= roundLength)
         {
+            SetVars(3, 7);
+            
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
@@ -192,6 +206,8 @@ public class EnemySpawner : MonoBehaviour
 
         if(round == 9 && tempRoundLength <= roundLength)
         {
+            SetVars(3, 7);
+            
             if(tempRoundLength < roundLength)
             {
                 count += Time.deltaTime;
@@ -210,7 +226,7 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        if(round == 10)
+        if(round >= 10)
         {
             count += Time.deltaTime;
             if(count >= interval)
@@ -224,6 +240,24 @@ public class EnemySpawner : MonoBehaviour
     void RollDie()
     {
         roll = Random.Range(1, 101);
+    }
+
+    void FirstRoundRandom()
+    {
+        RollDie();
+        if(roll > 0 && roll <= 100)
+        {
+            RandomTypeOneEnemy();
+        }
+    }
+
+    void SecondRoundRandom()
+    {
+        RollDie();
+        if(roll > 0 && roll <= 100)
+        {
+            RandomTypeOneEnemy();
+        }
     }
 
     void ThirdRoundRandom()
@@ -350,59 +384,12 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    void SetVars()
+
+
+    void SetVars(float _interval, int _roundLength)
     {
-        switch(round)
-        {
-            case 1:
-                interval = 5;
-                roundLength = 8;
-                break;
-
-            case 2:
-                interval = 3.75f;
-                roundLength = 10;
-                break;
-
-            case 3:
-                interval = 3;
-                roundLength = 5;
-                break;
-
-            case 4:
-                interval = 3;
-                roundLength = 7;
-                break;
-
-            case 5:
-                interval = 3;
-                roundLength = 7;
-                break;
-
-            case 6:
-                interval = 3;
-                roundLength = 7;
-                break;
-
-            case 7:
-                interval = 3;
-                roundLength = 7;
-                break;
-
-            case 8:
-                interval = 3;
-                roundLength = 7;
-                break;
-
-            case 9:
-                interval = 3;
-                roundLength = 15;
-                break;
-
-            case 10:
-                interval = 3;
-                break;
-        }
+        interval = _interval;
+        roundLength = _roundLength;
     }
 
     void RandomTypeOneEnemy()
@@ -424,7 +411,6 @@ public class EnemySpawner : MonoBehaviour
 
 
 
-
     void CheckSpawnLocation()
     {
         spawnLocation.transform.position = Random.insideUnitCircle * enemySpawnRadius;
@@ -435,6 +421,7 @@ public class EnemySpawner : MonoBehaviour
         }
 
     }
+
 
     void SamuelSpawnEnemy()
     {
