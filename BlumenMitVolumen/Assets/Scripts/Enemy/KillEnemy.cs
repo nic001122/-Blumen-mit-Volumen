@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class KillEnemy : MonoBehaviour
 {
@@ -16,9 +17,14 @@ public class KillEnemy : MonoBehaviour
         enemyHP -= onClickDamage;
         if (enemyHP <= 0)
         {
-            Instantiate(mineralsPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
-            Instantiate(particleSys, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            EnemyDeath();
         }
+    }
+
+    void EnemyDeath()
+    {
+        Instantiate(mineralsPrefab, transform.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+        Instantiate(particleSys, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
