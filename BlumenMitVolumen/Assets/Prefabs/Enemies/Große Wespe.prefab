@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 6365639428878290155}
   - component: {fileID: 6365639428878290154}
   - component: {fileID: 6365639428878290149}
-  - component: {fileID: 6365639428878290152}
   - component: {fileID: -812376060865981873}
   - component: {fileID: 5816917358939416845}
   - component: {fileID: -8068518834148610181}
   - component: {fileID: -1064300187832491311}
   - component: {fileID: -2439350826013432189}
   - component: {fileID: 5859680598510896043}
+  - component: {fileID: 3509461672375842229}
   m_Layer: 0
   m_Name: "Gro\xDFe Wespe"
   m_TagString: Enemy
@@ -105,22 +105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!58 &6365639428878290152
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6365639428878290148}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &-812376060865981873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,3 +207,19 @@ MonoBehaviour:
   timer: 0
   attackDelay: 2
   damage: 1
+--- !u!70 &3509461672375842229
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365639428878290148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2, y: 1}
+  m_Direction: 1
